@@ -18,6 +18,7 @@
         </ul>
 
         <!-- Outras vagas -->
+    <button onclick="voltarParaCadastro()">Voltar para Cadastro</button>
     </div>
 
     <script>
@@ -53,7 +54,8 @@
             document.getElementById('vagasOcupadas').textContent = vagasOcupadas;
             document.getElementById('vagasDisponiveis').textContent = vagasDisponiveis;
         }
-
+        function voltarParaCadastro() {
+            window.location.href = "index.html";}
         // Chama a função para exibir as vagas ao carregar a página
         window.onload = function() {
             exibirVagas();

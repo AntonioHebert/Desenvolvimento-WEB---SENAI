@@ -26,9 +26,11 @@
                 <!-- Aqui serão exibidas as vagas cadastradas -->
             </tbody>
         </table>
+    <button onclick="voltarParaCadastro()">Voltar para Cadastro</button>
     </div>
 <!-- Script JavaScript para carregar as vagas cadastradas -->
 <script>
+    
     // Recupera os dados das vagas cadastradas armazenados no localStorage
     var vagasCadastradas = JSON.parse(localStorage.getItem('vagasCadastradas')) || [];
 
@@ -40,13 +42,18 @@
         vagasCadastradas.forEach(function(vaga) {
             var newRow = tbody.insertRow();
             newRow.innerHTML = `<td>${vaga.placa}</td><td>${vaga.nome}</td><td>${vaga.apartamento}</td><td>${vaga.bloco}</td><td>${vaga.modelo}</td><td>${vaga.cor}</td><td>${vaga.vaga}</td>`;
+       
         });
     }
+    function voltarParaCadastro() {
+            window.location.href = "index.html";}
 
     // Chama a função para exibir as vagas cadastradas ao carregar a página
     window.onload = function() {
         exibirVagasCadastradas();
     };
+
+
 
 </script>
 </body>
